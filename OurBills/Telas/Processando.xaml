@@ -1,0 +1,14 @@
+﻿<Window x:Class="DoTheBills.Telas.Processando"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        Title="Processando" Height="400" Width="500" WindowStyle="None" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" AllowsTransparency="True" Activated="Window_Activated" Deactivated="Window_Deactivated">
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Control Name="loading" Template="{StaticResource loadingAnimation}"
+                 Width="20" Visibility="Visible" />
+            <TextBlock Name="processando" Text="Processando..." FontWeight="Bold" Foreground="Black" FontFamily="Arial" FontSize="12" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+    
+</Window>

@@ -1,0 +1,56 @@
+﻿<Window x:Class="DoTheBills.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title=" DoTheBillS" Height="300" Width="800" WindowStyle="ToolWindow">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="33"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="450"/>
+            <ColumnDefinition Width="11"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="11"/>
+        </Grid.ColumnDefinitions>
+        
+        <Image Source="../Imagens/money_tree.jpg" Height="auto" Width="450" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" />
+
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="11"/>
+                <RowDefinition Height="33"/>
+                <RowDefinition Height="11"/>
+                <RowDefinition Height="33"/>
+                <RowDefinition Height="11"/>
+                <RowDefinition Height="33"/>
+                <RowDefinition Height="33"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="11"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="22"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="22"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="USUÁRIO" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Style="{StaticResource HeaderCalendario}"/>
+            <TextBox Name="tbUsuario" Grid.Row="1" Grid.Column="3" Width="auto" MaxLength="16" Height="22" BorderBrush="Black" BorderThickness="1"/>
+
+            <TextBlock Text="SENHA" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Style="{StaticResource HeaderCalendario}"/>
+            <PasswordBox Name="tbSenha" Grid.Row="3" Grid.Column="3" Width="auto" Height="22" BorderBrush="Black" BorderThickness="1"/>
+
+            <Image Source="../Imagens/login2.png" Name="btnLogin" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="5" Grid.Column="3"
+                    PreviewMouseLeftButtonDown="btnLogin_PreviewMouseLeftButtonDown">
+                
+            </Image>
+            <TextBlock Name="msgErro" Text="USUÁRIO E/OU SENHA INVÁLIDOS" Style="{StaticResource MensagemErroLogin}" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center" Visibility="Collapsed"/>
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="DoTheBills.Telas.SelecaoGeracaoRelatorio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="170" Width="250" Activated="Window_Activated" Deactivated="Window_Deactivated" WindowStyle="ToolWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="11"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="ESCOLHA UM MÊS:" Style="{StaticResource HeaderCalendario}" Grid.Row="1" Margin="0,0,70,0"/>
+        <ComboBox Name="cbMeses" Grid.Row="2" Width="200" ItemsSource="{Binding}"/>
+        <Image Source="../Imagens/login2.png" Name="btnLogin" Grid.Row="4" HorizontalAlignment="Right" Margin="0,0,20,0" PreviewMouseLeftButtonDown="btnLogin_PreviewMouseLeftButtonDown"/>
+    </Grid>
+</Window>

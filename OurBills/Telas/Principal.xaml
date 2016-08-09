@@ -1,0 +1,150 @@
+﻿<Window x:Class="DoTheBills.Telas.Principal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             Title="DoTheBillS" Width="1300" Height="800" Background="White" WindowState="Maximized" WindowStyle="ToolWindow"
+             Icon="../Imagens/Iconshock-Credit-Card-Dollar.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="11"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33"/>
+            <ColumnDefinition Width="170"/>
+            <ColumnDefinition Width="22"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="33"/>
+        </Grid.ColumnDefinitions>
+
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="1" Grid.RowSpan="6">
+            <StackPanel>
+                <TextBlock Name="tbUsuario" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="USUÁRIO LOGADO" Style="{StaticResource HeaderCalendario}"/>
+                <Image Name="imgUsuarioLogado" Source="../Imagens/usuario_default.png" Margin="0,10,0,0" HorizontalAlignment="Center" Width="100" Height="100"/>
+            </StackPanel>
+        </Border>
+
+        <Button Grid.Row="11" Grid.Column="1" Name="btnLogout" IsEnabled="True"
+                PreviewMouseLeftButtonDown="btnLogout_PreviewMouseLeftButtonDown" >
+            <Grid Width="150">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="../Imagens/sair.png" Height="25" Width="30"/>
+                <TextBlock Text="Logout" HorizontalAlignment="Center" Grid.Column="1"/>
+            </Grid>
+        </Button>
+
+        <TextBlock Grid.Row="13" Grid.Column="1" Text="ADMIN" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="58,9,57,9" Style="{StaticResource HeaderCalendario}"/>
+        <TextBlock Grid.Row="17" Grid.Column="1" Text="EVENTOS" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="54,9" Style="{StaticResource HeaderCalendario}"/>
+
+        <Button Grid.Row="15" Grid.Column="1" Name="btnUsuarios" IsEnabled="True"
+                PreviewMouseLeftButtonDown="btnUsuarios_PreviewMouseLeftButtonDown" >
+            <Grid Width="150">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="../Imagens/silhouette49.png" Height="25" Width="30"/>
+                <TextBlock Text="Usuários" HorizontalAlignment="Center" Grid.Column="1"/>
+            </Grid>
+        </Button>
+
+        <Button Grid.Row="19" Grid.Column="1" Name="btnCadastrarEntrada" PreviewMouseLeftButtonDown="btnCadastrarEntrada_PreviewMouseLeftButtonDown">
+            <Grid Width="150">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="../Imagens/buy3.png" Height="25" Width="30"/>
+                <TextBlock Text="Cadastrar Entrada" HorizontalAlignment="Center" Grid.Column="1"/>
+            </Grid>
+        </Button>
+
+        <Button Grid.Row="21" Grid.Column="1" Name="btnCadastrarPagamento" PreviewMouseLeftButtonDown="btnCadastrarPagamento_PreviewMouseLeftButtonDown">
+            <Grid Width="150">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="../Imagens/payment.png" Height="25" Width="30"/>
+                <TextBlock Text="Cadastrar Pagamento" HorizontalAlignment="Center" Grid.Column="1"/>
+            </Grid>
+        </Button>
+        <Button Grid.Row="23" Grid.Column="1" Name="btnAlterarPagamento" PreviewMouseLeftButtonDown="btnAlterarPagamento_PreviewMouseLeftButtonDown" IsEnabled="False">
+            <Grid Width="150">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="../Imagens/pencil43.png" Height="25" Width="30"/>
+                <TextBlock Text="Alterar Pagamento" HorizontalAlignment="Center" Grid.Column="1"/>
+            </Grid>
+        </Button>
+        <Button Grid.Row="25" Grid.Column="1" Name="btnVerCalendario" PreviewMouseLeftButtonDown="btnVerCalendario_PreviewMouseLeftButtonDown" IsEnabled="True">
+            <Grid Width="150">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="../Imagens/timetable1.png" Height="25" Width="30"/>
+                <TextBlock Text="Ver Calendário" HorizontalAlignment="Center" Grid.Column="1"/>
+            </Grid>
+        </Button>
+        <Button Grid.Row="27" Grid.Column="1" Name="btnVerPoupancas" PreviewMouseLeftButtonDown="btnVerPoupancas_PreviewMouseLeftButtonDown">
+            <Grid Width="150">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="../Imagens/tool9.png" Height="25" Width="30"/>
+                <TextBlock Text="Ver Poupanças" HorizontalAlignment="Center" Grid.Column="1"/>
+            </Grid>
+        </Button>
+
+        <Button Grid.Row="29" Grid.Column="1" Name="btnGerarRelatorio" PreviewMouseLeftButtonDown="btnGerarRelatorio_PreviewMouseLeftButtonDown">
+            <Grid Width="150">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="../Imagens/pdf19.png" Height="25" Width="30"/>
+                <TextBlock Text="Gerar Relatório" HorizontalAlignment="Center" Grid.Column="1"/>
+            </Grid>
+        </Button>
+
+        <ContentPresenter Grid.Row="1" Grid.Column="3" Grid.RowSpan="40" Name="frame" Grid.ColumnSpan="2" Height="800" Width="1307" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+    </Grid>
+</Window>
